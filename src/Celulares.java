@@ -1,7 +1,7 @@
 /**Celulares.java 
 *@author Elena Rodríguez 21774 
 *@version 9/11/2021
-*Clase Celulares que hereda de Device e implementa interfaces Fotografías, Videos y Portátiles  
+*Clase Celulares que hereda de Telefonos e implementa interfaz Portátiles  
 */
 import java.util.Date;
 
