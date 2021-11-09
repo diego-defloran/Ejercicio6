@@ -4,8 +4,8 @@ import java.util.InputMismatchException;
 import java.util.Random;
 
 /**
- * @author Diego De Flor�n
- * @author Elena Rodr�guez
+ * @author Diego De Florán
+ * @author Elena Rodríguez
  *
  */
 public class Vista {
@@ -54,6 +54,58 @@ public class Vista {
 			}
 		} while (continua);
 	}
+	
+	public int menuAparatos(){
+		/** 
+		*Método menuAparatos int Muestra un listado con los Aparatos para que el usuario elija
+		*@return opcion int con el numero de la opcion
+		*/
+		boolean flag = false;
+		int opcion=0;
+		while (flag==false){
+			try{
+				System.out.println("\nElija el tipo de aparato que desea?\n" + "1. Smartphone\n" + "2. Celular\n"+"3.Fijos\n"+"4. Camaras\n"+"5. Desktop\n"+"6. Laptop\n"+"7. SmartTV\n"+"8. Tablet\n"+"9. Smartwatch\n");
+				opcion = scan.nextInt();
+			} catch (InputMismatchException ex){
+				System.out.println("Debe ingresar un numero entero");
+				scan.next();
+				continue;
+			}
+			if (opcion==1 || opcion==2 || opcion==3 || opcion==4 || opcion==5 || opcion==6 || opcion==7 || opcion==8 || opcion==9){
+				flag=true;
+			} else {
+				System.out.println("OPCION INCORRECTA");
+			}
+		}
+		return opcion;
+		}
+		
+		
+	public int ElegirAccion(String Acciones, int numAcciones){
+		/** 
+		*Método ElegirAccion int Le muestra al usuario las características que posee el objeto que seleccionó y le pregunta cual desea probar
+		*@return opcion int con el numero de la opcion
+		*/
+		boolean flag = false;
+		int opcion=0;
+		while (flag==false){
+			try{
+				System.out.println("\nElija el tipo de aparato que desea?\n" + Acciones);
+				opcion = scan.nextInt();
+			} catch (InputMismatchException ex){
+				System.out.println("Debe ingresar un numero entero");
+				scan.next();
+				continue;
+			}
+			if (opcion<=0 || opcion>numAcciones){
+				System.out.println("OPCION INCORRECTA");
+			} else {
+				flag=true;
+			}
+		}
+		return opcion;
+		}
+	
 }
 
 
