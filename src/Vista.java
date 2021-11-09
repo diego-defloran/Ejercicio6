@@ -85,6 +85,8 @@ public class Vista {
 		/** 
 		*Método ElegirAccion int Le muestra al usuario las características que posee el objeto que seleccionó y le pregunta cual desea probar
 		*@return opcion int con el numero de la opcion
+		*@param Acciones String con las acciones de cada aparato
+		*@param numAcciones int con el número de las acciones
 		*/
 		boolean flag = false;
 		int opcion=0;
