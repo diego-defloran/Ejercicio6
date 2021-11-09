@@ -5,9 +5,9 @@
 */
 import java.util.Date;
 
-class Smartphones extends Telefonos implements Portatiles {
+class Celulares extends Telefonos implements Portatiles {
 	//Constructor
-	public Smartphones(String precio, String marca, Date fecha, String serie, String marcAR, String tipo){
+	public Celulares(String precio, String marca, Date fecha, String serie, String marcAR, String tipo){
 		super(precio, marca, fecha, serie, marcAR, tipo);
 	}
 	
