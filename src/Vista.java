@@ -1,5 +1,7 @@
 import java.util.Scanner;
+import java.time.format.DateTimeFormatter;
 import java.util.InputMismatchException;
+import java.util.Random;
 
 /**
  * @author Diego De Florán
@@ -33,6 +35,7 @@ public class Vista {
 					
 				}
 				else if (opcion == 2) {
+					Carrito car = new Carrito();
 					
 				}
 				else if(opcion == 3) {
