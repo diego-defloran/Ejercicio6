@@ -72,6 +72,7 @@ abstract class Device{
 	
 	public abstract String getCaracteristicas();
 	public abstract int getnumCaracteristicas();
+	public abstract String Probar(int num, String info);
 	
 	public String toString(){
 		String info = "\nEste es un "+deviceType+" "+manufacturer+" con numero de serie "+serialNumber+" la fecha de fabricacion es "+productionDate+" y tiene un precio de "+price+".\n";
