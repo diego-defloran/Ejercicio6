@@ -92,7 +92,7 @@ public class Vista {
 		int opcion=0;
 		while (flag==false){
 			try{
-				System.out.println("\nElija el tipo de aparato que desea?\n" + Acciones);
+				System.out.println("\nElija lo que desea probar?\n" + Acciones);
 				opcion = scan.nextInt();
 			} catch (InputMismatchException ex){
 				System.out.println("Debe ingresar un numero entero");
