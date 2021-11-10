@@ -2,6 +2,7 @@ import java.util.Scanner;
 import java.time.format.DateTimeFormatter;
 import java.util.InputMismatchException;
 import java.util.Random;
+import java.util.Date;
 
 /**
  * @author Diego De Florán
@@ -29,7 +30,7 @@ public class Vista {
 		int opcion=0;
 		while (flag==false){
 			try{
-				System.out.println"Bienvenido a Electronica Latinoamericana!\n Que desea realizar?" + "1. Ver productos\n2. Ver carrito\n3. Salir\nIngrese su opcion: ");
+				System.out.println("Bienvenido a Electronica Latinoamericana!\n Que desea realizar?\n" + "1. Ver productos\n"+"2. Ver carrito\n"+"3. Salir\n"+"Ingrese su opcion: ");
 				opcion = scan.nextInt();
 			} catch (InputMismatchException ex){
 				System.out.println("Debe ingresar un numero entero");
@@ -99,7 +100,36 @@ public class Vista {
 		return opcion;
 		}
 	
+	public int Elegir(){
+		boolean flag = false;
+		int opcion=0;
+		while (flag==false){
+			try{
+				System.out.println("\nDesea probar una funcionalidad del aparato?\n" + "1. SI\n"+"2. NO\n");
+				opcion = scan.nextInt();
+			} catch (InputMismatchException ex){
+				System.out.println("Debe ingresar un numero entero");
+				scan.next();
+				continue;
+			}
+			if (opcion==1 || opcion==2){
+				flag=true;
+			} else {
+				System.out.println("OPCION INCORRECTA");
+			}
+		}
+		return opcion;
+	}
+	
+	public String Agregarinfo(){
+		System.out.println("Ingrese la informacion que desea probar");
+		String info = scan.next();
+		return info;
+	}
+	
+	public void MostrarPrueba(String prueba){
+		System.out.println("\n"+prueba+"\n");
+	}
+	
 }
-
-
 
