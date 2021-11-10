@@ -22,38 +22,29 @@ public class Vista {
 	public void bienvenida() {
 		System.out.println(encabezado);
 	}
+
 	
-	public void menu() {
-		System.out.println("Bienvenido a Electronica Latinoamericana!\n Que desea realizar?");
-		System.out.println("1. Ver productos\n2. Ver carrito\n3. Salir\nIngrese su opcion: ");
-		do {
-			try {
-				continua = false;
+	public int menu(){
+		boolean flag = false;
+		int opcion=0;
+		while (flag==false){
+			try{
+				System.out.println"Bienvenido a Electronica Latinoamericana!\n Que desea realizar?" + "1. Ver productos\n2. Ver carrito\n3. Salir\nIngrese su opcion: ");
 				opcion = scan.nextInt();
-				
-				if(opcion == 1) {
-					menuAparatos();
-				}
-				else if (opcion == 2) {
-					Carrito car = new Carrito();
-					
-				}
-				else if(opcion == 3) {
-					System.out.println("Gracias por visitarnos! Vuelva pronto");
-					System.exit(0);
-				}
-				else if(opcion > 3 || opcion <  0) {
-					System.out.println("Ingrese una opcion valida. Intente de nuevo: ");
-					continua = true;
-				}
-			}
-			catch (InputMismatchException e) {
-				System.out.println("Debe ingresar una opcion valida. Intente de nuevo: ");
+			} catch (InputMismatchException ex){
+				System.out.println("Debe ingresar un numero entero");
 				scan.next();
-				continua= true;
+				continue;
 			}
-		} while (continua);
-	}
+			if (opcion==1 || opcion==2 || opcion==3){
+				flag=true;
+			} else {
+				System.out.println("OPCION INCORRECTA");
+			}
+		}
+		return opcion;
+		}
+	
 	
 	public int menuAparatos(){
 		/** 
