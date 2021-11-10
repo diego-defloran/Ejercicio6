@@ -1,4 +1,5 @@
 /**Device.java 
+*Se utilizó el código realizado por la empresa anterios
 *@author Elena Rodríguez 21774 
 *@version 18/10/2021
 *Clase Device funciona como clase madre   
