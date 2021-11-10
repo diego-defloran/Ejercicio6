@@ -32,8 +32,37 @@ public class Vista {
 			try{
 				System.out.println("Bienvenido a Electronica Latinoamericana!\n Que desea realizar?\n" + "1. Ver productos\n"+"2. Ver carrito\n"+"3. Salir\n"+"Ingrese su opcion: ");
 				opcion = scan.nextInt();
+<<<<<<< Updated upstream
 			} catch (InputMismatchException ex){
 				System.out.println("Debe ingresar un numero entero");
+=======
+<<<<<<< HEAD
+				
+				if(opcion == 1) {
+					
+				}
+				else if (opcion == 2) {
+					Carrito car = new Carrito();
+					car.Ingresar();
+					car.Factura();
+					
+				}
+				else if(opcion == 3) {
+					System.out.println("Gracias por visitarnos! Vuelva pronto");
+					System.exit(0);
+				}
+				else if(opcion > 3 || opcion <  0) {
+					System.out.println("Ingrese una opcion valida. Intente de nuevo: ");
+					continua = true;
+				}
+			}
+			catch (InputMismatchException e) {
+				System.out.println("Debe ingresar una opcion valida. Intente de nuevo: ");
+=======
+			} catch (InputMismatchException ex){
+				System.out.println("Debe ingresar un numero entero");
+>>>>>>> 10eb89c3141d12bcaced7f90fe141633ececd8e1
+>>>>>>> Stashed changes
 				scan.next();
 				continue;
 			}
