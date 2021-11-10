@@ -1,8 +1,9 @@
-/**Pinguino.java 
+/**Laptop.java 
 *@author Elena Rodríguez 21774 
-*@version 18/10/2021
-*Clase Pinguino que hereda de la clase combatiente  
+*@version 9/11/2021
+*Clase Laptop que hereda de Compitadoras e implementa interfaz Portatiles
 */
+
 import java.util.Date;
 
 class Laptop extends Computadoras implements Portatiles {
@@ -12,6 +13,12 @@ class Laptop extends Computadoras implements Portatiles {
 	}
 	
 	public String Probar(int numFuncionalidad, String info){
+		/** 
+		*Método Probar String Selecciona el String con las indicaciones según la opción del usuario
+		*@param numFuncionalidad int numero de la funcionalidad que desea probar el usuario
+		*@para info String con información extra para probar la característica
+		*@return probando String con las instrucciones
+		*/
 		String probando ="";
 		if(numFuncionalidad==1){
 			probando = NavegarInternet(info);
@@ -25,11 +32,19 @@ class Laptop extends Computadoras implements Portatiles {
 	
 	
 	public String getCaracteristicas(){
+		/** 
+		*Método getCaracteristicas String
+		*@return caracteristicas String con las funcionalidades que puede probar el usuario
+		*/
 		String caracteristicas = "\n1. Tomar fotografia\n"+"2. Ver video\n"+"3. Ejecutar Videojuego\n";
 		return caracteristicas;
 	}
 	
 	public int getnumCaracteristicas(){
+		/** 
+		*Método getnumCaracteristicas int
+		*@return num int con el numero de funcionalidades que puede probar el usuario
+		*/
 		int num = 3;
 		return num;
 	}
