@@ -32,7 +32,7 @@ public class Vista {
 				opcion = scan.nextInt();
 				
 				if(opcion == 1) {
-					
+					menuAparatos();
 				}
 				else if (opcion == 2) {
 					Carrito car = new Carrito();
