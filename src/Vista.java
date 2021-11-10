@@ -3,7 +3,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Date;
-
+import java.util.InputMismatchException;
 /**
  * @author Diego De Florán
  * @author Elena Rodríguez
@@ -32,11 +32,10 @@ public class Vista {
 			try{
 				System.out.println("Bienvenido a Electronica Latinoamericana!\n Que desea realizar?\n" + "1. Ver productos\n"+"2. Ver carrito\n"+"3. Salir\n"+"Ingrese su opcion: ");
 				opcion = scan.nextInt();
-<<<<<<< Updated upstream
+
 			} catch (InputMismatchException ex){
 				System.out.println("Debe ingresar un numero entero");
-=======
-<<<<<<< HEAD
+
 				
 				if(opcion == 1) {
 					
@@ -61,8 +60,7 @@ public class Vista {
 
 			} catch (InputMismatchException ex){
 				System.out.println("Debe ingresar un numero entero");
->>>>>>> 10eb89c3141d12bcaced7f90fe141633ececd8e1
->>>>>>> Stashed changes
+
 				scan.next();
 				continue;
 			}

@@ -1,4 +1,4 @@
-import com.opencsv.*;
+//import com.opencsv.*;
 import java.io.*;
 import java.io.IOException;
 import java.util.InputMismatchException;
@@ -8,7 +8,7 @@ import java.util.Random;
 
 public class Carrito {
 	FileReader archCSV = null;
-    CSVReader csvReader = null;
+    //CSVReader csvReader = null;
     int opcion;
     boolean continua;
     String tipo;
@@ -20,7 +20,7 @@ public class Carrito {
     ArrayList<String> tipos = new ArrayList<> ();
     ArrayList<Integer> precios = new ArrayList<> ();
     ArrayList<String> marcas = new ArrayList<> ();
-  public void Mostrar() {
+  /*public void Mostrar() {
     try {
       //Leo el archivo con el separador estándar ","
       // archCSV = new FileReader("data/ISO-Codes.csv");
@@ -34,10 +34,10 @@ public class Carrito {
 
       //Ahora leo el archivo con el separador ";"
       archCSV = new FileReader("data/Productos.csv");
-      CSVParser conComa = new CSVParserBuilder().withSeparator(',').build();
-      csvReader = new CSVReaderBuilder(archCSV).withCSVParser(conComa).build();
+      //CSVParser conComa = new CSVParserBuilder().withSeparator(',').build();
+      //csvReader = new CSVReaderBuilder(archCSV).withCSVParser(conComa).build();
       String[] fila = null;
-      while((fila = csvReader.readNext()) != null) {
+      //while((fila = csvReader.readNext()) != null) {
           System.out.println(fila[0]
                     + " | " + fila[1]
                     + " |  " + fila[2]
@@ -63,7 +63,7 @@ public class Carrito {
         System.out.println(e);
       }
     }
-  }
+  }*/
   
   public void Ingresar() {
 	  Scanner scan = new Scanner(System.in);

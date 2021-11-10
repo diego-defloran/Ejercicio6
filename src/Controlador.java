@@ -57,6 +57,9 @@ public class Controlador {
 			} else if (opcion==2){
 				//Ver Carrito
 				Carrito car = new Carrito();
+				car.Ingresar();
+				car.Factura();
+				
 			} else if (opcion==3){
 				//Salir
 				System.out.println("Gracias por visitarnos! Vuelva pronto");
