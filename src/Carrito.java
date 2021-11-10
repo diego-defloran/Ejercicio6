@@ -1,4 +1,7 @@
-//import com.opencsv.*;
+/*
+ * @author Diego
+ */
+import com.opencsv.*;
 import java.io.*;
 import java.io.IOException;
 import java.util.InputMismatchException;
@@ -6,21 +9,24 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Carrito {
-	FileReader archCSV = null;
-    //CSVReader csvReader = null;
+public class Carrito implements Comparable<Device>{
+	FileReader archCSV;
+    CSVReader csvReader;
     int opcion;
     boolean continua;
     String tipo;
     int precio;
     String marca;
     String nombre;
+    String tipoFactura = "Serie F";
+    int numFactura;
+    Random ran1 = new Random();
     Scanner scan = new Scanner(System.in);
     Random ran = new Random();
     ArrayList<String> tipos = new ArrayList<> ();
     ArrayList<Integer> precios = new ArrayList<> ();
     ArrayList<String> marcas = new ArrayList<> ();
-  /*public void Mostrar() {
+  public void Mostrar() {
     try {
       //Leo el archivo con el separador estándar ","
       // archCSV = new FileReader("data/ISO-Codes.csv");
@@ -33,11 +39,11 @@ public class Carrito {
       // }
 
       //Ahora leo el archivo con el separador ";"
-      archCSV = new FileReader("data/Productos.csv");
-      //CSVParser conComa = new CSVParserBuilder().withSeparator(',').build();
-      //csvReader = new CSVReaderBuilder(archCSV).withCSVParser(conComa).build();
+      archCSV = new FileReader("Productos.csv");
+      CSVParser conComa = new CSVParserBuilder().withSeparator(',').build();
+      csvReader = new CSVReaderBuilder(archCSV).withCSVParser(conComa).build();
       String[] fila = null;
-      //while((fila = csvReader.readNext()) != null) {
+      while((fila = csvReader.readNext()) != null) {
           System.out.println(fila[0]
                     + " | " + fila[1]
                     + " |  " + fila[2]
@@ -63,7 +69,7 @@ public class Carrito {
         System.out.println(e);
       }
     }
-  }*/
+  }
   
   public void Ingresar() {
 	  Scanner scan = new Scanner(System.in);
@@ -198,6 +204,8 @@ public class Carrito {
 	  System.out.println("----------FACTURA---------");
 	  System.out.println("Cliente: " + nombre);
 	  System.out.println("NIT: " + NIT + "\n------------------");
+	  numFactura = ran1.nextInt(max_val) + min_val;
+	  System.out.println("Factura : " + tipoFactura + " - " + numFactura );
 	  System.out.println(nombreTienda + "\n" + paisTienda + "\n" + direccionTienda);
 	  for (int e = 0; e < tipos.size(); e++) {
 		  System.out.print(tipos.get(e) + "\n");
@@ -219,6 +227,13 @@ public class Carrito {
 	  }
 	  return total;
   }
+
+
+@Override
+public int compareTo(Device o) {
+	// TODO Auto-generated method stub
+	return 0;
+}
   
 
   }

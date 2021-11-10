@@ -10,6 +10,8 @@ class Camaras extends Device implements Fotografias, Videos, Portatiles {
 	//Constructor
 	public Camaras(String precio, String marca, Date fecha, String serie, String marcAR, String tipo){
 		super(precio, marca, fecha, serie, marcAR, tipo);
+		this.deviceType = "Camara";
+		this.serialNumber = "C48000";
 	}
 	
 	public String Probar(int numFuncionalidad, String info){

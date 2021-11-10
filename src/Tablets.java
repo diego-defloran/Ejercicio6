@@ -10,6 +10,8 @@ class Tablets extends Device implements Fotografias, Internet, Videos, Portatile
 	//Constructor
 	public Tablets(String precio, String marca, Date fecha, String serie, String marcAR, String tipo){
 		super(precio, marca, fecha, serie, marcAR, tipo);
+		this.deviceType = "Tablet";
+		this.serialNumber = "T50000";
 	}
 	
 	public String Probar(int numFuncionalidad, String info){

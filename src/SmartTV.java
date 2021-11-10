@@ -10,6 +10,8 @@ class SmartTV extends Device implements Internet, Videos {
 	//Constructor
 	public SmartTV(String precio, String marca, Date fecha, String serie, String marcAR, String tipo){
 		super(precio, marca, fecha, serie, marcAR, tipo);
+		this.deviceType = "Smart TV";
+		this.serialNumber = "S42000";
 	}
 	
 	public String Probar(int numFuncionalidad, String info){

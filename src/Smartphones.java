@@ -10,6 +10,8 @@ class Smartphones extends Telefonos implements Fotografias, Internet, Videos, Po
 	//Constructor
 	public Smartphones(String precio, String marca, Date fecha, String serie, String marcAR, String tipo){
 		super(precio, marca, fecha, serie, marcAR, tipo);
+		this.deviceType = "Smartphone";
+		this.serialNumber = "M45000";
 	}
 	
 	public String Probar(int numFuncionalidad, String info){

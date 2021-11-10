@@ -9,6 +9,8 @@ class Fijos extends Telefonos {
 	//Constructor
 	public Fijos(String precio, String marca, Date fecha, String serie, String marcAR, String tipo){
 		super(precio, marca, fecha, serie, marcAR, tipo);
+		this.deviceType = "Celular Fijo";
+		this.serialNumber = "M47000";
 	}
 	
 	public String Probar(int numFuncionalidad, String info){

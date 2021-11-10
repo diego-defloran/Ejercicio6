@@ -10,6 +10,8 @@ class Smartwatch extends Telefonos implements Fotografias, Portatiles {
 	//Constructor
 	public Smartwatch(String precio, String marca, Date fecha, String serie, String marcAR, String tipo){
 		super(precio, marca, fecha, serie, marcAR, tipo);
+		this.deviceType = "Smartwatch";
+		this.serialNumber = "A47000";
 	}
 	
 	public String Probar(int numFuncionalidad, String info){

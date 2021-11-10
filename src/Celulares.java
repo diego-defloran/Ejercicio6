@@ -9,6 +9,8 @@ class Celulares extends Telefonos implements Portatiles {
 	//Constructor
 	public Celulares(String precio, String marca, Date fecha, String serie, String marcAR, String tipo){
 		super(precio, marca, fecha, serie, marcAR, tipo);
+		this.deviceType = "Celular";
+		this.serialNumber = "M46000";
 	}
 	
 	public String Probar(int numFuncionalidad, String info){

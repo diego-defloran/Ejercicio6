@@ -10,6 +10,8 @@ class Laptop extends Computadoras implements Portatiles {
 	//Constructor
 	public Laptop(String precio, String marca, Date fecha, String serie, String marcAR, String tipo){
 		super(precio, marca, fecha, serie, marcAR, tipo);
+		this.deviceType = "Laptop";
+		this.serialNumber = "D41000";
 	}
 	
 	public String Probar(int numFuncionalidad, String info){
