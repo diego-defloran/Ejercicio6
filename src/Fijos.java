@@ -1,7 +1,7 @@
-/**Pinguino.java 
+/**Fijos.java 
 *@author Elena Rodríguez 21774 
-*@version 18/10/2021
-*Clase Pinguino que hereda de la clase combatiente  
+*@version 9/11/2021
+*Clase Fijos que hereda de Telefonos
 */
 import java.util.Date;
 
@@ -12,6 +12,12 @@ class Fijos extends Telefonos {
 	}
 	
 	public String Probar(int numFuncionalidad, String info){
+		/** 
+		*Método Probar String Selecciona el String con las indicaciones según la opción del usuario
+		*@param numFuncionalidad int numero de la funcionalidad que desea probar el usuario
+		*@para info String con información extra para probar la característica
+		*@return probando String con las instrucciones
+		*/
 		String probando ="";
 		if(numFuncionalidad==1){
 			probando = Llamar(info);
@@ -20,12 +26,20 @@ class Fijos extends Telefonos {
 	}
 	
 	public String getCaracteristicas(){
-		String caracteristicas = "\n1. Hacer llamadas\n"+"2. Tomar fotografia\n"+"3. Navegar por internet\n"+"4. Ver videos\n";
+		/** 
+		*Método getCaracteristicas String
+		*@return caracteristicas String con las funcionalidades que puede probar el usuario
+		*/
+		String caracteristicas = "\n1. Hacer llamadas\n";
 		return caracteristicas;
 	}
 	
 	public int getnumCaracteristicas(){
-		int num = 4;
+		/** 
+		*Método getnumCaracteristicas int
+		*@return num int con el numero de funcionalidades que puede probar el usuario
+		*/
+		int num = 1;
 		return num;
 	}
 	

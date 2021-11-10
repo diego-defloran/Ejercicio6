@@ -1,8 +1,9 @@
-/**Pinguino.java 
+/**Telefonos.java 
 *@author Elena Rodríguez 21774 
-*@version 18/10/2021
-*Clase Pinguino que hereda de la clase combatiente  
-*/
+*@version 9/11/2021
+*Clase abstracta Telefonos que hereda de Device e implementa interfaz Llamadas
+*/ 
+
 import java.util.Date;
 
 abstract class Telefonos extends Device implements Llamadas {
@@ -12,6 +13,11 @@ abstract class Telefonos extends Device implements Llamadas {
 	}
 	
 	public String Llamar(String num){
+		/** 
+		*Método Llamar
+		*@param num String
+		*@return llamada String con las indicaciones
+		*/
 		String llamada = "Llamando al numero "+num+" desde mi " +deviceType+" "+manufacturer+" con numero de serie "+serialNumber;
 		return llamada;
 	
