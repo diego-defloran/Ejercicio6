@@ -58,7 +58,7 @@ public class Vista {
 			}
 			catch (InputMismatchException e) {
 				System.out.println("Debe ingresar una opcion valida. Intente de nuevo: ");
-=======
+
 			} catch (InputMismatchException ex){
 				System.out.println("Debe ingresar un numero entero");
 >>>>>>> 10eb89c3141d12bcaced7f90fe141633ececd8e1
