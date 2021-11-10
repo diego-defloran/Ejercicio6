@@ -30,7 +30,7 @@ class Fijos extends Telefonos {
 		*Método getCaracteristicas String
 		*@return caracteristicas String con las funcionalidades que puede probar el usuario
 		*/
-		String caracteristicas = "\n1. Hacer llamadas\n"+"2. Tomar fotografia\n"+"3. Navegar por internet\n"+"4. Ver videos\n";
+		String caracteristicas = "\n1. Hacer llamadas\n";
 		return caracteristicas;
 	}
 	
@@ -39,7 +39,7 @@ class Fijos extends Telefonos {
 		*Método getnumCaracteristicas int
 		*@return num int con el numero de funcionalidades que puede probar el usuario
 		*/
-		int num = 4;
+		int num = 1;
 		return num;
 	}
 	
